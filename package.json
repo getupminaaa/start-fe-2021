@@ -1,0 +1,28 @@
+{
+  "name": "start-fe_final-exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack && cp dist/* ../docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://getupminaaa@github.com/getupminaaa/start-fe_final-exam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getupminaaa/start-fe_final-exam/issues"
+  },
+  "homepage": "https://github.com/getupminaaa/start-fe_final-exam#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "install": "^0.13.0",
+    "npm": "^7.18.1",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
