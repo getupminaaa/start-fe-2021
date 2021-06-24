@@ -1,3 +1,5 @@
+const $class_loading = document.querySelector("#class-loading").parentNode;
+const $quiz_loading = document.querySelector("#quiz-loading").parentNode;
 const $classTable = document.querySelector("#class");
 const $quizTable = document.querySelector("#quiz");
 const $classFilter = document.querySelector("#class-filter");
@@ -10,6 +12,9 @@ const $class_git = document.querySelector("#class_git");
 const $class_recent = document.querySelector("#class_recent");
 const $quiz_all = document.querySelector("#quiz_all");
 const $quiz_git = document.querySelector("#quiz_git");
+
+waitLoading($class_loading);
+waitLoading($quiz_loading);
 
 fetch("./class.json")
   .then(function (response) {
@@ -62,6 +67,7 @@ fetch("./quiz.json")
 
 for (let i = 0; i < $classBtns.length; i = i + 1) {
   $classBtns[i].addEventListener("click", function () {
+    waitLoading($class_loading);
     let current = $classFilter.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -69,6 +75,7 @@ for (let i = 0; i < $classBtns.length; i = i + 1) {
 }
 for (let i = 0; i < $quizBtns.length; i = i + 1) {
   $quizBtns[i].addEventListener("click", function () {
+    waitLoading($quiz_loading);
     let current = $quizFilter.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
@@ -162,7 +169,7 @@ $class_git.addEventListener("click", function () {
           <td>${classData[i]["title"]}</td>
           <td><a href="${
             classData[i]["docUrl"]
-          }" class="badge bg-secondary">문서</a></td>
+          }"class="badge bg-secondary">문서</a></td>
           <td>${links}</td>
           <td>${classData[i]["date"]}</td>
           <td><a href="${classData[i]["gitUrl"]}">git</a></td>
@@ -249,3 +256,11 @@ $quiz_git.addEventListener("click", function () {
       }
     });
 });
+
+function waitLoading(loading) {
+  loading.className = "visually-hidden";
+  setTimeout((handler) => {
+    // load(selectedTab.childNodes[0].id);
+    loading.className = "hidden";
+  }, 1000);
+}
