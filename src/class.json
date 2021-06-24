@@ -3,7 +3,7 @@
     "title": "수업소개",
     "docUrl": "https://start-fe.surge.sh",
     "links": [],
-    "gitUrl": "https://github.com/getupminaaa/start-fe",
+    "gitUrl": "",
     "date": "2021-03-04"
   },
   {
@@ -133,7 +133,7 @@
   },
   {
     "title": "React",
-    "docUrl": "http://start-fe.surge.sh/react/",
+    "docUrl": "https://start-fe.surge.sh/react/",
     "links": [
       "https://jamstack.org/generators/",
       "https://vuepress.vuejs.org/",
@@ -145,7 +145,7 @@
   },
   {
     "title": "기말고사",
-    "docUrl": "https://bit.ly/2TvOzFy",
+    "docUrl": "https://github.com/advanced-webapps-class/classroom/tree/gh-pages/2021/test2",
     "links": [],
     "gitUrl": "https://github.com/getupminaaa/start-fe-2021",
     "date": "2021-06-17"

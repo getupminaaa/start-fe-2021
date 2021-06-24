@@ -19,18 +19,18 @@
     <div class="container">
         <div class="titlewrap">
             <h3>학습</h3>
-            <div class="btnwrap">
+            <div class="btnwrap" id="class-filter">
                 <!-- 학습리스트 필터 -->
                 <div class="btn-group" role="group">
                     <!-- 선택된 버튼에만 active 속성 추가 -->
-                    <button type="button" class="btn btn-outline-primary active">
+                    <button type="button" class="btn btn-outline-primary active" id="class_all">
                         모두
                     </button>
-                    <button type="button" class="btn btn-outline-primary">
+                    <button type="button" class="btn btn-outline-primary" id="class_help" >
                         도움링크
                     </button>
-                    <button type="button" class="btn btn-outline-primary">git</button>
-                    <button type="button" class="btn btn-outline-primary">
+                    <button type="button" class="btn btn-outline-primary" id="class_git">git</button>
+                    <button type="button" class="btn btn-outline-primary" id="class_recent">
                         최신순
                     </button>
                 </div>
@@ -64,12 +64,12 @@
         <div class="titlewrap">
             <h3>퀴즈</h3>
             <!-- 퀴즈리스트 필터 -->
-            <div class="btnwrap">
+            <div class="btnwrap" id="quiz-filter">
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-primary active">
+                    <button type="button" class="btn btn-outline-primary active" id="quiz_all">
                         모두
                     </button>
-                    <button type="button" class="btn btn-outline-primary">git</button>
+                    <button type="button" class="btn btn-outline-primary" id="quiz_git" >git</button>
                 </div>
             </div>
         </div>
